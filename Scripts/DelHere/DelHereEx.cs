@@ -11,7 +11,7 @@ namespace AleVerDes.LeoEcsLiteZoo
         }
         public static IEcsSystems DelHereEntityWith<T>(this IEcsSystems ecsSystems) where T : struct
         {
-            ecsSystems.Add(new DelHereEntityWithSystem<T>());
+            ecsSystems.Add(new DelHereEntitySystem<T>());
             return ecsSystems;
         }
     }
