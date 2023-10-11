@@ -8,9 +8,10 @@ namespace AleVerDes.LeoEcsLiteZoo
         {
             var world = systems.GetWorld();
             var filter = world.Filter<T>().End();
+            var pool = world.Pool<T>();
             foreach (var entity in filter)
             {
-                world.DelEntity(entity);
+                pool.Del(entity);
             }
         }
     }
