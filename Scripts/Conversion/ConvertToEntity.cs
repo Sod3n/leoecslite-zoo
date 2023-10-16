@@ -101,8 +101,10 @@ namespace AleVerDes.LeoEcsLiteZoo
                     {
                         component.ConvertToEntity(DefaultConversionWorld, _entity.Value);
                         _hasAnyComponent = true;
+                        Destroy((UnityEngine.Object)component);
                     }
                     ConvertChildrenToEntity(child);
+                    Destroy(convertToEntity);
                 }
             }
         }
