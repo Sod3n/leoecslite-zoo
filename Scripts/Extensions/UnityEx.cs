@@ -7,7 +7,7 @@ namespace AleVerDes.LeoEcsLiteZoo
         public static bool TryGetEntity(this GameObject gameObject, out int entity)
         {
             var convertToEntity = gameObject.GetComponentInParent<ConvertToEntity>();
-            if (!convertToEntity)
+            if (!convertToEntity || convertToEntity.CollectMode == CollectMode.IncludeChildren)
             {
                 entity = default;
                 return false;
