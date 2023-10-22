@@ -19,6 +19,11 @@ namespace AleVerDes.LeoEcsLiteZoo
         private bool _converted;
         private bool _hasAnyComponent;
 
+        public CollectMode CollectMode
+        {
+            get { return _collectMode; }
+        }
+
         private IEnumerator Start()
         {
             switch (_convertTime)
